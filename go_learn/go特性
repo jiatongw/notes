@@ -31,7 +31,18 @@
 
 值类型和引用类型
 1. 值类型：变量直接存储值，内存通常在栈中分配。值类型有：int, float等基本数据类型，数组array，和struct
-2. 引用类型：变量存储的是一个地址，这个地址存储最终的值。内存通常在堆上分配。通过GC回收。引用类型有pointer, slice, map, chan等
+2. 引用类型：变量存储的是一个地址，这个地址存储最终的值。内存通常在堆上分配。通过GC回收。引用类型有pointer, slice, map, chan, interface等
 
 函数
 1.go语言中函数不支持重载
+2.函数也可以赋值给变量
+	func foo(){}
+	a := foo
+	fmt.Println(a) 打印出来的是函数的地址
+3.匿名函数
+4.多返回值
+5.可变参数
+	func add(arg ...int) int {} 0个或多个参数
+	func add(a int, arg ...int) int {} 1个或多个参数
+	其中arg是一个slice， 我们可以通过arg[index]依次访问所有参数
+	通过len(arg)来判断传递参数的个数

@@ -53,7 +53,6 @@ func main() {
 	fmt.Println(path)
 
 	// 指针练习
-
 	var a int = 10
 	fmt.Println(&a)
 
@@ -63,10 +62,23 @@ func main() {
 
 	modify(&a)
 	fmt.Println(a)
+
+	//调用可变参数函数
+	sum := add(10, 3)
+	fmt.Println(sum)
 }
 
 func modify(p *int) {
 	fmt.Println(p)
 	*p = 100
 	return
+}
+
+// 可变参数函数练习
+func add(a int, arg ...int) int {
+	var sum = a
+	for i := 0; i < len(arg); i++ {
+		sum += arg[i]
+	}
+	return sum
 }
