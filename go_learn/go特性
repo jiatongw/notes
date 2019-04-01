@@ -46,3 +46,23 @@
 	func add(a int, arg ...int) int {} 1个或多个参数
 	其中arg是一个slice， 我们可以通过arg[index]依次访问所有参数
 	通过len(arg)来判断传递参数的个数
+6.defer用途
+	1.关闭文件句柄
+		func read() {
+			file := open(filename)
+			defer file.close()
+			//文件操作
+		}
+	2.锁资源释放
+		func read() {
+			mc.Lock()
+			defer mc.Unlock()
+			//其他操作
+		}
+	3.数据库链接释放
+		func read() {
+			conn := openDatabase()
+			defer conn.Close()
+			//其他操作
+		}
+	
