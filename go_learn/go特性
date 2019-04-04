@@ -71,3 +71,15 @@
 	1.长度是数组的一部分
 		var a [5]int 和 var a [10]int 是不同类型 
 	2.数组是值类型，因此改变副本的值，不会改变本身的值
+9.切片
+	切片拷贝
+	s1 := []int{1,2,3,4,5}
+	s2 := make([]int, 10)
+	copy(s2, s1)
+	s3 := []int{1,2,3}
+	s3 = append(s3, s2...)
+	s3 = append(s3, 4, 5, 6)
+
+	string底层就是一个byte的数组，因此string也可以进行切片操作
+	str := "hello world"
+	s1 := str[0:5]
