@@ -83,3 +83,9 @@
 	string底层就是一个byte的数组，因此string也可以进行切片操作
 	str := "hello world"
 	s1 := str[0:5]
+
+包
+1.线程同步
+	1.import("sync")
+	2.互斥锁, var mu sunc.Mutex
+	3.读写锁, var mu sync.RWMutex
