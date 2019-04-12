@@ -89,3 +89,11 @@
 	1.import("sync")
 	2.互斥锁, var mu sunc.Mutex
 	3.读写锁, var mu sync.RWMutex
+
+Sturct
+1.结构体定义的三种形式
+	比如有一个 type Student struct{}
+	1.var stu Student
+	2.var stu *Student = new(Student)
+	3.var stu *Student = &Student{}
+2.结构体的内存布局，结构体中所有字段在内存中是连续的
