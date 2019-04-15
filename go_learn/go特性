@@ -97,3 +97,13 @@ Sturct
 	2.var stu *Student = new(Student)
 	3.var stu *Student = &Student{}
 2.结构体的内存布局，结构体中所有字段在内存中是连续的
+3.结构体中每个字段可以有一个tag.这个tag可以通过反射的机制获取到,最常用的场景就是json序列化和反序列化
+	type struct student {
+		Name string `this is name field`
+		Age int 	`this is age field`
+	}
+4.结构体中字段可以没有名字，即匿名字段
+	type struct student {
+			Name string 
+			int
+		}
