@@ -27,4 +27,5 @@ func main() {
 	}
 	t = stu
 	t.Print()
+	
 }
