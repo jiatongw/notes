@@ -107,3 +107,17 @@ Sturct
 			Name string 
 			int
 		}
+
+方法
+1.Golang中的方法是作用在特定类型的变量上，因此自定义类型，都可以有方法，而不仅仅是struct
+func (receiver type) methodName(arg) (return values) {}
+2.组合(composite)和匿名字段
+	如果一个struct嵌套了另一个匿名结构体，那么这个结构体可以直接访问匿名结构体的方法，从而实现了继承
+	如果一个struct嵌套了另一个有名结构体，那么这个模式就叫组合
+
+接口
+1.interface类型可以定义一组方法，但是这些不需要实现，并且interface不能包含任何变量
+2.接口实现
+	1.go语言中的接口，不需要显示的实现，只要一个变量，含有接口类型中的所有方法，
+	  那么这个变量就实现这个接口。因此，没有implement类似的关键字
+	2.如果一个变量含有多个interface类型的方法，那么这个变量就实现了多个接口
