@@ -123,4 +123,15 @@ func (receiver type) methodName(arg) (return values) {}
 	2.如果一个变量含有多个interface类型的方法，那么这个变量就实现了多个接口
 3.多态
 	一种事物的多种形态，都可以按照统一的接口进行操作
+4.空接口
+	空接口没有任何方法，所以所有类型都实现了空接口
+
+反射
+1.反射可以在运行时动态获取变量的相关信息
+	import ("reflect")
+	两个函数：
+		1.reflect.TypeOf, 获取变量的类型, 返回reflect.Type类型
+		2.reflect.ValueOf, 获取变量的类型, 返回reflect.Value类型
+		3.reflect.Value.Kind, 获取变量的类别, 返回一个常量
+		4.reflect.Value.Interface(), 转换成interface{}类型
  
