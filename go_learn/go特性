@@ -134,4 +134,11 @@ func (receiver type) methodName(arg) (return values) {}
 		2.reflect.ValueOf, 获取变量的类型, 返回reflect.Value类型
 		3.reflect.Value.Kind, 获取变量的类别, 返回一个常量
 		4.reflect.Value.Interface(), 转换成interface{}类型
- 
+
+终端读写
+os.Stdin: 标准输入
+os.Stdout: 标准输出
+os.Stderr: 标准错误输出
+
+文件读写
+1.os.File 封装所有文件相关操作，os.Stdin，os.Stdout，os.Stderr 都是 *os.File
