@@ -146,3 +146,10 @@ os.Stderr: 标准错误输出
 	os.OpenFIle()
 3.拷贝文件
 	io.Copy(dst, src)
+
+命令行参数
+1.os.Args 是一个string的切片，用来存储所有的命令行参数
+2.flag包的使用，用来解析命令行参数
+	flag.BoolVar(&test, "b", false, "print on newline")
+	flag.StringVar()
+	flag.IntVar()
