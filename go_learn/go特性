@@ -142,3 +142,7 @@ os.Stderr: 标准错误输出
 
 文件读写
 1.os.File 封装所有文件相关操作，os.Stdin，os.Stdout，os.Stderr 都是 *os.File
+2.文件写入
+	os.OpenFIle()
+3.拷贝文件
+	io.Copy(dst, src)
