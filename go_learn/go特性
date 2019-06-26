@@ -153,3 +153,4 @@ os.Stderr: 标准错误输出
 	flag.BoolVar(&test, "b", false, "print on newline")
 	flag.StringVar()
 	flag.IntVar()
+
