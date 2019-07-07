@@ -1,5 +1,7 @@
 
 ## Personal Golang notes and some cheatsheets
 
-Update randomly.
+Update randomly
+
+.
 
