@@ -18,5 +18,8 @@ mongo connection failed solution:
 Git submodule process:
 1. add submodule: git submodule add   source_url   dest_dir
 2. modify .gitmodules file to use a sprcific branch (i.e. add a branch information: branch = vmware-1.15.0)
-3. update submodule: git submodule update --init --recursive --remote 
+3. update submodule: git submodule update --init --recursive --remote
+
+Git delete the first commit: 
+	git rebase -i —-root 
 
