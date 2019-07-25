@@ -23,3 +23,5 @@ Git submodule process:
 Git delete the first commit: 
 	git rebase -i —-root 
 
+docker rm all containers:
+	docker rm $(docker rm -a -q) (docker rm -a -q) will list all container IDs
