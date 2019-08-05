@@ -2,3 +2,15 @@ ctrl+d，按一次是选中当前单词，当两次就是将下一次出现的�
 ctrl+shift+x, 安装扩展
 先按下Ctrl + K，再摁 Ctrl + S，出现所有shortcut
 
+返回上一次的位置:
+On Windows:
+Alt + ←  navigate back
+Alt + →  navigate forward
+
+On Mac:
+Ctrl + -  navigate back
+Ctrl + Shift + -  navigate forward
+
+On Ubuntu Linux:
+Ctrl + Alt + -  navigate back
+Ctrl + Shift + -  navigate forward
