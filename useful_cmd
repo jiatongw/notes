@@ -43,4 +43,5 @@ vim 中 :x 和 :wq 的真正区别:
 这两者一般情况下没什么不一样，但是在编程方面，对编辑源文件可能会产生重要影响。因为文件即使没有修改，":wq"强制更新文件的修改时间，
 这样会让make编译整个项目时以为文件被修改过了，然后就得重新编译链接生成可执行文件。这可能会产生让人误解的后果，当然也产生了不必要的系统资源花销。
 
-kubenetes cluster 没起来，很可能是kubelet没起来，这个时候要查看systemd log, 和kubelet的log。
+kubenetes cluster 没起来，很可能是kubelet没起来，这个时候要查看systemd log, 和kubelet的log。syslog的位置在/var/logs/syslog
+
