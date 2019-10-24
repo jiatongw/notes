@@ -15,4 +15,8 @@ On Ubuntu Linux:
 Ctrl + Alt + -  navigate back
 Ctrl + Shift + -  navigate forward
 
+The code formatting is available in Visual Studio Code through the following shortcuts:
 
+On Windows: Shift + Alt + F
+On Mac: Shift + Option + F
+On Ubuntu: Ctrl + Shift + I
