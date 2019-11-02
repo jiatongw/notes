@@ -45,4 +45,8 @@ vim 中 :x 和 :wq 的真正区别:
 
 kubenetes cluster 没起来，很可能是kubelet没起来，这个时候要查看systemd log, 和kubelet的log。syslog的位置在/var/logs/syslog。或者用systemctl status kubelet来查看kubelet状态，如果没起来，有一个可能是Kubeadm没执行。也有可能是container的repo名字没对上。这时候就要查一下kubeadm的config和kubeadm的log。
 
+静态编译与动态编译的区别：
+静态编译就是在编译时，把所有模块都编译进可执行文件里，当启动这个可执行文件时，所有模块都被加载进来；
+动态编译是将应用程序需要的模块都编译成动态链接库，启动程序（初始化）时，这些模块不会被加载，运行时用到哪个模块就调用哪个
+一般建议用静态编译
 
