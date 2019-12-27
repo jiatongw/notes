@@ -103,3 +103,6 @@ self在定义时需要定义，但是在调用时会自动传入。
 self的名字并不是规定死的，但是最好还是按照约定是用self
 self总是指调用时的类的实例, 不是类本身。
 
+Go Context
+比如一个网络请求Request，每个Request都需要开启一个goroutine做一些事情，这些goroutine又可能会开启其他的goroutine。所以我们需要一种可以跟踪goroutine的方案，才可以达到控制他们的目的，这就是Go语言为我们提供的Context，称之为上下文非常贴切，它就是goroutine的上下文。
+
