@@ -111,3 +111,11 @@ Go Context
 切片是可索引的，并且可以由len()方法获取长度，切片提供了计算容量的方法cap()，可以测量切片最长可以达到多少。
 切片实际的是获取数组的某一部分，len切片<=cap切片<=len数组
 
+在shell中
+
+'>'  为创建: echo "hello shell"  > out.txt
+'>>' 为追加: echo "hello shell"  >> out.txt
+
+当out.txt 文本不存在时,'>'与'>>'都会默认创建out.txt文本，并将hello shell 字符串保存到out.txt中
+
+当out.txt文本存在时，'>'会将out.txt文本中的内容清空，并将hello shell 字符串存, 而'>>'会将 hello shell追加保存到out.txt的末尾
