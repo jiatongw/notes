@@ -123,3 +123,16 @@ Go Context
 
 bash script可以当做binary来执行。比如bazel.sh，当去掉文件后缀.sh，就可以./bazel
 
+
+golang build in container example:
+docker run --rm \
+-v "${PWD}:/go/src/sigs.k8s.io/kind" \
+-v "${PWD}/bin:/go/bin" \
+-w "/go/src/sigs.k8s.io/kind" \
+--env CGO_ENABLED=0 \
+--env GOOS=${GOOS:-linux} \
+--env GOARCH=${GOARCH:-amd64} \
+--env GO111MODULE=on \
+golang:${golangVersion} \
+go build -a -ldflags '-extldflags "-static"' -o /go/bin/kind
+
