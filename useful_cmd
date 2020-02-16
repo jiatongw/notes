@@ -136,3 +136,21 @@ docker run --rm \
 golang:${golangVersion} \
 go build -a -ldflags '-extldflags "-static"' -o /go/bin/kind
 
+
+special charactors
+
+#! /bin/sh
+echo '$#' $#
+echo '$@' $@
+echo '$?' $?
+
+run as ./test.sh 1 2 3 4
+
+output will be:
+$#  4
+$@  1 2 3 4
+$?  0
+
+$# means number of arguments. Answer is 3
+$@ means what parameters were passed. Answer is 1 2 3
+$? means was last command successful. Answer is 0 which means 'yes'
