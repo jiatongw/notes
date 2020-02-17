@@ -154,3 +154,22 @@ $?  0
 $# means number of arguments. Answer is 3
 $@ means what parameters were passed. Answer is 1 2 3
 $? means was last command successful. Answer is 0 which means 'yes'
+
+
+python 初始化二维数组：
+如果是 B = [[0]*3]*4来创建二维数组， 那么
+>>> B
+[[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]]
+但是，B[0][1] = 2，输出：
+>>> B
+[[0, 2, 0], [0, 2, 0], [0, 2, 0], [0, 2, 0]]
+
+按照B = [[0]*3]*4来创建二维数组只是4个指向这个空列表元素的引用,修改任何一个元素都会改变整个列表
+
+在Python中创建二维数组应该这样写：
+C = [[0]*3 for i in range(4)]
+>>> C[0][1] = 2
+>>> C
+[[0, 2, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+通用：aList = [[0] * cols for i in range(rows)]
