@@ -182,3 +182,16 @@ C = [[0]*3 for i in range(4)]
 libseccomp package: runC needs this
 seccomp是一种内核中的安全机制,正常情况下,程序可以使用所有的syscall,这是不安全的,比如劫持程序流后通过execve的syscall来getshell.通过seccomp我们可以在程序中禁用掉某些syscall,这样就算劫持了程序流也只能调用部分的syscall了
 
+
+
+dockerd, containerd, ctr,shim, runc,等这几个进程的关系
+
+- docker是cli
+- dockerd是docker engine守护进程，dockerd启动时会启动containerd子进程
+- dockerd与containerd通过rpc进行通信
+- ctr是containerd的cli
+- containerd通过shim操作runc，runc真正控制容器生命周期
+- 启动一个容器就会启动一个shim进程
+- shim直接调用runc的包函数,shim与containerd之前通过rpc通信
+- 真正用户想启动的进程由runc的init进程启动，即runc init [args ...]
+
