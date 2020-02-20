@@ -195,3 +195,7 @@ dockerd, containerd, ctr,shim, runc,等这几个进程的关系
 - shim直接调用runc的包函数,shim与containerd之前通过rpc通信
 - 真正用户想启动的进程由runc的init进程启动，即runc init [args ...]
 
+
+${BASH_SOURCE[0]}表示bash脚本的第一个参数
+"dirname"表示提取参数里的目录，dirname "${BASH_SOURCE[0]}"表示提取bash脚本第一个参数里的目录
+
