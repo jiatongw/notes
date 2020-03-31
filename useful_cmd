@@ -238,3 +238,7 @@ SQL 数据库使用传统的 SQL 语言来进行增删查改，而 NoSQL 数据�
 nums[i], nums[nums[i] - 1] = nums[nums[i] - 1], nums[i]
 nums[i] will be modified first and then affect the second variable nums[nums[i] - 1]
 
+
+Docker image ID and digest:
+The "digest" is a hash of the manifest, introduced in Docker registry v2.
+The image ID is a hash of the local image JSON configuration.
