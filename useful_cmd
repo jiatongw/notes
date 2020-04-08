@@ -242,3 +242,8 @@ nums[i] will be modified first and then affect the second variable nums[nums[i] 
 Docker image ID and digest:
 The "digest" is a hash of the manifest, introduced in Docker registry v2.
 The image ID is a hash of the local image JSON configuration.
+
+Docker has different storage driver. 
+如device mapper, overlay, overlay2. 
+containerd 默认的storage driver是overlay. 所以说如果用docker 产生的Image, 不是用的overlay作为driver, 那么用containerd pull或者import image, 有可能会出错。其中一种解决方法是，ctr image import --snapshottor=native， 加个native参数
+
