@@ -270,3 +270,9 @@ In JSON:
   item2key1: "string3",
   item2key2: "string4"
 }]
+
+tar vs tar.gz
+tar只是将文件打包，文件的大小没什么变化，一般用tar -cvf filename.tar 
+tar.gz是加入了gzip的压缩命令，会将文件压缩存放，可以有效压缩文件的大小，以便于缩短传输时间或者释放磁盘空间，一般用tar -czvf filename.tar.gz filename。
+
+解包的时候使用 tar -xvf filename.tar和tar -xzvf filename.tar.gz。
