@@ -316,3 +316,11 @@ sleep 1
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 sed cmd: sed -i -e "s#%%ABC%%#${VAR}#" file
+
+
+string "escape"的意思
+escape是转义的意思，转义字符就是escape character。例如：
+"our favorate number is 8, \n because it meansrich in chinese." 因为加上了\n, 计算机读到这里就明白了，是要换行。所以\之后的字符“逃离”了原本需要被打印出来的宿命。
+
+jq -r 可以parse带有转义字符的数据。-r表示raw的意思，it will unescape characters.
+
