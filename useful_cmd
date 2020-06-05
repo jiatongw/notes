@@ -324,3 +324,4 @@ escape是转义的意思，转义字符就是escape character。例如：
 
 jq -r 可以parse带有转义字符的数据。-r表示raw的意思，it will unescape characters.
 
+zip文件的时候：zip -r xxx.zip dir1 dir2 file1 file2 
