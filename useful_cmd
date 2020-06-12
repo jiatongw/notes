@@ -329,15 +329,16 @@ zip文件的时候：zip -r xxx.zip dir1 dir2 file1 file2
 shell 中，把string按照分隔符分割：
 shell 中特殊变量 IFS
 IFS 是内置分隔符。例子：
-IFS=','
+OLDIFS=$IFS
 text='a a a a,b b b b,c c c c'
-for i in $text;
+IFS="," read -ra array <<< "${text}"
+for i in ${text[@]};
 do 
   echo "i=$i";
 done
+IFS=${OLDIFS}
 输出是:
 i=a a a a
 i=b b b b
 i=c c c c
-这里，分隔符就是"," 
-
+这里，分隔符就是"," 。注意，要把IFS还原为原值。IFS最好和要执行的语句在同一行
