@@ -356,3 +356,23 @@ output:
 index is 0, value is 1
 index is 1, value is 2
 index is 2, value is 3
+
+
+bash cut a range usage:
+
+> echo "ref_categorie=test" | cut -c1-15-
+test
+> echo "ref_categorie=test" | cut -c1-14-
+=test
+echo "ref_categorie=test" | cut -c15-
+test
+echo "ref_categorie=test" | cut -c15 
+t
+>
+-c15 will cut character position 15
+-c1-15 will cut character positions 1 thru 15
+-c15- will cut from character position 15 to the end
+-c1-5,10-11,21-
+cut positions 1 through 5, 10 through 11, and from 21 to the end
+
+
