@@ -342,3 +342,17 @@ i=a a a a
 i=b b b b
 i=c c c c
 这里，分隔符就是"," 。注意，要把IFS还原为原值。IFS最好和要执行的语句在同一行
+
+
+bash for loop:
+
+array=(1 2 3)
+array_length=${#array[@]}
+for (( i=0; i<${array_length}; i++ )); do
+  echo "index is ${i}, value is ${array[$i]}"
+done
+
+output:
+index is 0, value is 1
+index is 1, value is 2
+index is 2, value is 3
