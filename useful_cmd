@@ -376,3 +376,6 @@ t
 cut positions 1 through 5, 10 through 11, and from 21 to the end
 
 
+sudo 直接传password，不用跳出光标
+sudo -S "password" <<< command
+
