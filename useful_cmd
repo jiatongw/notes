@@ -379,3 +379,7 @@ cut positions 1 through 5, 10 through 11, and from 21 to the end
 sudo 直接传password，不用跳出光标
 sudo -S "password" <<< command
 或者 echo "password" | sudo -S command
+
+
+git delete all merged local branch:
+git branch -D `git branch --merged | grep -v \* | xargs`
