@@ -389,4 +389,8 @@ sudo 不用password:
 
 1. Open the /etc/sudoers file by running: sudo visudo
 2. At the end of the /etc/sudoers file add this line: username     ALL=(ALL) NOPASSWD:ALL, where username is the account name. then save and quit
+
+ssh 执行代码不用登陆：
+sshpass -p '{password}' ssh -o StrictHostKeyChecking=no root@${IP_ADDRESS} 'sh -s' < file
+
  
