@@ -393,4 +393,11 @@ sudo 不用password:
 ssh 执行代码不用登陆：
 sshpass -p '{password}' ssh -o StrictHostKeyChecking=no root@${IP_ADDRESS} 'sh -s' < file
 
- 
+
+
+如何ssh to ipv6地址：
+
+如果IPv6 地址是fe80::开头 
+ssh <username>@<ipv6 address>%<interface>， interface是eth0, wlan0, enp3s0, wlp4s0 or tap1.可以用ifconfig寻找
+如果IPv6 地址不是fe80::开头
+ssh <username>@<ipv6 address>
