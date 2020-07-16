@@ -1,5 +1,5 @@
 
-## Personal Golang notes and some cheatsheets
+## Personal notes for shell, golang, python, linux kernel.. everything
 
 Update randomly
 
