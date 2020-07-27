@@ -422,3 +422,11 @@ sshpass -p '{password}' ssh -o StrictHostKeyChecking=no root@${IP_ADDRESS} 'sh -
 ssh <username>@<ipv6 address>%<interface>， interface是eth0, wlan0, enp3s0, wlp4s0 or tap1.可以用ifconfig寻找
 如果IPv6 地址不是fe80::开头
 ssh <username>@<ipv6 address>
+
+
+Difference between return 1, return 0, return -1 and exit
+return from main() is equivalent to exit
+
+return in an inner function (not main) will terminate immediately the execution of the specific function returning the given result to the calling function.
+
+exit from anywhere on your code will terminate program execution immediately.
