@@ -430,3 +430,25 @@ return from main() is equivalent to exit
 return in an inner function (not main) will terminate immediately the execution of the specific function returning the given result to the calling function.
 
 exit from anywhere on your code will terminate program execution immediately.
+
+完全清除遗留的gitmodules
+首先，try 
+git rm --cached path_to_submodule 
+rm -rf path_to_submodule
+
+Then:
+
+Delete the relevant lines from the .gitmodules file. e.g. delete these:
+
+[submodule "path_to_submodule"]
+    path = path_to_submodule
+    url = https://github.com/path_to_submodule
+
+Delete the relevant section from .git/config. e.g. delete these:
+
+[submodule "path_to_submodule"]
+    url = https://github.com/path_to_submodule
+
+rm -rf .git/modules/path_to_submodule
+
+
