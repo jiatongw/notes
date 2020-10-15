@@ -452,3 +452,5 @@ Delete the relevant section from .git/config. e.g. delete these:
 rm -rf .git/modules/path_to_submodule
 
 
+git submodule fatal : Needed a single revision 的原因
+这个多半是因submodule 的 url 有所修改导致的
