@@ -38,3 +38,5 @@ class Solution:
         identical_rightcheck = self.helper(left.right, right.right)
         
         return (mirror_leftcheck and mirror_rightcheck) or (identical_leftcheck and identical_rightcheck)
+
+    ## Time 4 ^ O(logn) = O(n^2)
