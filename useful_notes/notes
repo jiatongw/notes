@@ -454,3 +454,8 @@ rm -rf .git/modules/path_to_submodule
 
 git submodule fatal : Needed a single revision 的原因
 这个多半是因submodule 的 url 有所修改导致的
+
+CI/CD:
+CI: running bunch of tests and showing a flag
+CD: take a set of commits, putting them in order, and making sure at every stage that the its green.
+
