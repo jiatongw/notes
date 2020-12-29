@@ -1,7 +1,7 @@
 '''
 1. what does it store on each level? 4 levels, each level represents how many coins of this value
 can be selected to form the final results
-2. how maany different states should we try to put on each level? it depends on the input
+2. how many different states should we try to put on each level? it depends on the input
 
                         99 cents
                     /        |         |         | 
