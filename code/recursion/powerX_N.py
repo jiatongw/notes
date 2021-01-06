@@ -17,4 +17,4 @@ def power(x, n):
         return power(x, n//2) * power(x, n//2) * x
 
 if __name__ == '__main__':
-    print(power(3, -3))
+    print(power(2, 2))
