@@ -1,4 +1,4 @@
-visited = [91]
+visited = [91, 44, 10, 836, 408, 527, 205]
 
 set(visited)
 
