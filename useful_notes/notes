@@ -459,3 +459,4 @@ CI/CD:
 CI: running bunch of tests and showing a flag
 CD: take a set of commits, putting them in order, and making sure at every stage that the its green.
 
+Golang marshal 到json时: 可以用 json.MarshalIndent(var, "", "  ")
