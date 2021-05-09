@@ -461,6 +461,8 @@ CD: take a set of commits, putting them in order, and making sure at every stage
 
 Golang marshal 到json时: 可以用 json.MarshalIndent(var, "", "  ")
 
+
+
 k8s configMap:
 configmap是k8s的一个配置管理组件，可以将配置以key-value的形式传递，通常用来保存不需要加密的配置信息，加密信息则需用到Secret，主要用来应对以下场景：
 
@@ -468,3 +470,9 @@ configmap是k8s的一个配置管理组件，可以将配置以key-value的形�
 使用微服务架构的话，存在多个服务共用配置的情况，如果每个服务中单独一份配置的话，那么更新配置就很麻烦，使用configmap可以友好的进行配置共享。
 其次，configmap可以用来保存单个属性，也可以用来保存配置文件。
 
+
+
+liveness vs. readiness
+Kubelet使用liveness probe（存活探针）来确定何时重启容器。例如，当应用程序处于运行状态但无法做进一步操作，liveness探针将捕获到deadlock，重启处于该状态下的容器，使应用程序在存在bug的情况下依然能够继续运行下去（谁的程序还没几个bug呢）。
+
+Kubelet使用readiness probe（就绪探针）来确定容器是否已经就绪可以接受流量。只有当Pod中的容器都处于就绪状态时kubelet才会认定该Pod处于就绪状态。该信号的作用是控制哪些Pod应该作为service的后端。如果Pod处于非就绪状态，那么它们将会被从service的load balancer中移除。
