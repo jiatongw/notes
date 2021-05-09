@@ -460,3 +460,11 @@ CI: running bunch of tests and showing a flag
 CD: take a set of commits, putting them in order, and making sure at every stage that the its green.
 
 Golang marshal 到json时: 可以用 json.MarshalIndent(var, "", "  ")
+
+k8s configMap:
+configmap是k8s的一个配置管理组件，可以将配置以key-value的形式传递，通常用来保存不需要加密的配置信息，加密信息则需用到Secret，主要用来应对以下场景：
+
+使用k8s部署应用，当你将应用配置写进代码中，就会存在一个问题，更新配置时也需要打包镜像，configmap可以将配置信息和docker镜像解耦。
+使用微服务架构的话，存在多个服务共用配置的情况，如果每个服务中单独一份配置的话，那么更新配置就很麻烦，使用configmap可以友好的进行配置共享。
+其次，configmap可以用来保存单个属性，也可以用来保存配置文件。
+
