@@ -476,3 +476,9 @@ liveness vs. readiness
 Kubelet使用liveness probe（存活探针）来确定何时重启容器。例如，当应用程序处于运行状态但无法做进一步操作，liveness探针将捕获到deadlock，重启处于该状态下的容器，使应用程序在存在bug的情况下依然能够继续运行下去（谁的程序还没几个bug呢）。
 
 Kubelet使用readiness probe（就绪探针）来确定容器是否已经就绪可以接受流量。只有当Pod中的容器都处于就绪状态时kubelet才会认定该Pod处于就绪状态。该信号的作用是控制哪些Pod应该作为service的后端。如果Pod处于非就绪状态，那么它们将会被从service的load balancer中移除。
+
+
+python 的 list 赋值
+l1 = [1, 2, 3]
+l2 = l1
+此时 l1, l2共享一个地址空间。l1元素的改动会影响l2. 但是如果l1 = [], 那么l1则被重新赋值到新的地址空间，l1, l2就是两个不同的东西了
