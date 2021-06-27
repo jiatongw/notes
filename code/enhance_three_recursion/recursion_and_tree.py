@@ -45,3 +45,28 @@ level order [20, 8, 22, 4, 12, 10, 14]
 ### level order 的第一个是每一层的 root, 然后 在Inorder中找出root index
 ### 方法1: 遍历level order，element 在Inorder中小于root index 的，是左子树，放进left_list，大于root index 的放进right_list
 ### 方法2: 每次maintain一个hashset, 在inorder中，index左边的放进set, 然后每次遍历level order，在set中的，放进left_list，不在的放进right_list
+
+
+'''
+N node LCA 问题
+fond LCA in a n ary tree, k nodes
+'''
+
+def LCA(root, input):
+    if not root:
+        return None
+    
+    if root in input:
+        return root
+
+    count = 0
+    tmp = None
+    for child in root.children:
+        lca = LCA(child, input)
+        if lca is not None:
+            count += 1
+            tmp = lca
+        if count >= 2:
+            return root
+        
+    return tmp

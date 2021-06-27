@@ -63,10 +63,10 @@ Q2 给一个 sorted array, remove duplicated elements
 
 用slow, fast1, fast2 指针
 
-2 1 2 3 3 4 4
+1 2 2  3 3 4 4
   s
-      f1
-      f2
+  f1
+       f2
 '''
 
 def remove3Fail(l):
@@ -106,7 +106,7 @@ def remove3Correct(l):
         fast1 = fast2
 
     return l[:slow]
-# print(remove3Fail([0,1,1,2,2,2,3,3,3,4,4,5]))
+print(remove3Correct([0,1,1,2,2,2,3,3,3,4,4,5]))
 
 '''
 给一个随机数组，random numbers, 把所有 0 都放在数组的最后

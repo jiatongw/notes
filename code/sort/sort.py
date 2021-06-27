@@ -39,6 +39,11 @@ def merge(left_array, right_array):
             tmp.append(left_array[k])
     return tmp
 
+###### Merge Sort ######
+### LinkedList 版本  LC 148 ###
+
+
+
 
 #### Quick sort #####
 #### https://chinese.freecodecamp.org/news/sorting-in-python/ ###

@@ -24,3 +24,14 @@ options:
 
     Trie: search, add, delete 时间复杂度都是O(m), m是单词长度
 '''
+
+'''
+how to delete a word in Trie?
+
+视频58分钟开始
+'''
+
+'''
+Q DFS + Trie
+Find all words with a given prefix
+'''

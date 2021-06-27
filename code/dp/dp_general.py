@@ -13,3 +13,27 @@ for example:
     cut rope
     cut palindrome
 '''
+
+'''
+LC 343
+Maximal product when cutting ropes
+
+_ _ | _ _ _ product = 2 * 3 = 6
+
+_ | _ | _ | _ | _  product = 1 * 1 * 1 * 1 * 1 = 1
+'''
+
+## sol 1: recursion
+## TIME = O(n!)
+def cutRope(n):
+    if n <= 1:
+        return 0
+
+    maxProduct = 0
+
+    for i in range(1, n):
+        curBest = max(n - i, cutRope(n - i))
+        ## 这里 curBest 是指 一刀都不切，和切一刀后的最大值
+        maxProduct = max(maxProduct, curBest * i)
+    
+    return maxProduct
